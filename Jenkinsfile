@@ -1,12 +1,12 @@
 pipeline {
     agent any
-    
+    /*
     environment {
         NETLIFY_SITE_ID = 'bb287a31-2cb1-4fc4-aa1e-1f80411819ab'
         NETLIFY_AUTH_TOKEN = credentials('netlify-token')
         REACT_APP_VERSION = "1.0.$BUILD_ID"
     }
-
+    */
     stages {
         stage('Docker'){
             steps{
@@ -82,7 +82,7 @@ pipeline {
         }
 
         // Deploy stage
-        
+        /*
         stage('Deploy staging') {
             agent {
                 docker {
@@ -144,6 +144,6 @@ pipeline {
                     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'playwright-report', reportFiles: 'index.html', reportName: 'prod E2E', reportTitles: '', useWrapperFileDirectly: true])
                 }
             }
-        }
+        }*/
     }
 }
